@@ -1,5 +1,6 @@
 @use '../base/variables' as *
 @use '../components/buttons' as *
+@use '../components/cards' as *
 .order
     padding-top: 35px
     padding-bottom: 50px
@@ -22,3 +23,25 @@
         width: 315px
         text-align: center
         margin-bottom: 35px
+
+.howto
+    margin-top: 35px
+    padding: 0px 15px
+
+    h2
+        font-weight: 700
+        font-size: 24px
+        margin-bottom: 25px
+
+.howto-list
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 0px 10px
+    margin-bottom: 35px
+    .howto-card
+        margin-bottom: 25px
+    :last-child
+            i
+                color: #9356DC
