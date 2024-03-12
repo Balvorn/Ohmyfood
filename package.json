@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 2 openclassroom : OhMyFood",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./css/style.sass:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balvorn/Ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Balvorn/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Balvorn/Ohmyfood#readme"
+}
