@@ -24,6 +24,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -159,6 +160,16 @@ html {
 }
 .footer h2 {
   font-family: "Shrikhand", serif;
+  margin-bottom: 20px;
+}
+.footer .footer-nav {
+  padding: 20px 15px;
+}
+.footer .footer-nav p {
+  margin-bottom: 10px;
+}
+.footer .footer-nav p i {
+  margin-right: 10px;
 }
 
 .order-button {
@@ -171,6 +182,12 @@ html {
   color: white;
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+
+.order-button:hover {
+  transition: 0.5s;
+  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.137)) opacity(75%);
 }
 
 .howto-card {
@@ -206,9 +223,74 @@ html {
   width: 211px;
 }
 
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  height: 251px;
+}
+.restaurant-card img {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+.restaurant-card .restaurant-card-new-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  position: absolute;
+  font-size: 14px;
+  font-weight: 500;
+  width: 80px;
+  height: 20px;
+  margin-top: 15px;
+  right: 25px;
+}
+.restaurant-card .restaurant-card-content {
+  width: 80%;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.restaurant-card .restaurant-card-content .restaurant-card-name {
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.restaurant-card .restaurant-card-content .restaurant-card-location {
+  font-size: 17px;
+  font-weight: 300;
+}
+.restaurant-card .restaurant-card-content .icon {
+  border-radius: 0;
+  position: absolute;
+  margin-top: 10px;
+  right: 35px;
+  font-size: 22px;
+}
+.restaurant-card .restaurant-card-content .icon:hover {
+  color: transparent;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  font-weight: 900;
+}
+
+section {
+  padding: 35px 15px 50px;
+}
+section h2 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
 .order {
-  padding-top: 35px;
-  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -231,29 +313,25 @@ html {
   margin-bottom: 35px;
 }
 
-.howto {
-  margin-top: 35px;
-  padding: 0px 15px;
-}
-.howto h2 {
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 25px;
-}
-
-.howto-list {
+.howto .howto-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px 10px;
-  margin-bottom: 35px;
 }
-.howto-list .howto-card {
+.howto .howto-list .howto-card {
   margin-bottom: 25px;
 }
-.howto-list :last-child i {
+.howto .howto-list :last-child i {
   color: #9356DC;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+}
+.restaurants .restaurant-card {
+  margin-bottom: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

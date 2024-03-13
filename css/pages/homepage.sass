@@ -1,9 +1,15 @@
 @use '../base/variables' as *
 @use '../components/buttons' as *
 @use '../components/cards' as *
+
+section
+    padding: 35px 15px 50px
+    h2
+        font-weight: 700
+        font-size: 24px
+        margin-bottom: 25px
+
 .order
-    padding-top: 35px
-    padding-bottom: 50px
     display: flex
     flex-direction: column
     justify-content: center
@@ -25,23 +31,20 @@
         margin-bottom: 35px
 
 .howto
-    margin-top: 35px
-    padding: 0px 15px
+    .howto-list
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 0px 10px
 
-    h2
-        font-weight: 700
-        font-size: 24px
-        margin-bottom: 25px
-
-.howto-list
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    padding: 0px 10px
-    margin-bottom: 35px
-    .howto-card
-        margin-bottom: 25px
-    :last-child
+        .howto-card
+            margin-bottom: 25px
+        :last-child
             i
                 color: #9356DC
+
+.restaurants
+    background-color: $primary-color
+    .restaurant-card
+            margin-bottom: 25px
