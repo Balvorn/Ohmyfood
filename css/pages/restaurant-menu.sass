@@ -1,0 +1,146 @@
+@use '../base/variables' as *
+@use '../components/buttons' as *
+@use '../components/cards' as *
+
+.restaurant-img
+    max-height: 383px
+    width: 100%
+    object-fit: cover
+.container
+    position: relative
+    z-index: 1
+    margin: auto
+    margin-top: -50px
+    background-color: $primary-color
+    border-top-left-radius: 40px
+    border-top-right-radius: 40px
+    padding: 40px 10px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    max-width: 1055px
+
+    h1
+        font-size: 28px
+        font-family: 'Shrikhand', serif
+        width: 320px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    .icon
+        font-size: 28px
+    section
+        margin-top: 40px
+        width: 100%
+        max-width: 634px
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        h2
+            text-transform: uppercase
+            font-size: 15px
+            font-weight: 300
+            position: relative
+        h2::after
+            content: ''
+            position: absolute
+            bottom: 0
+            width: 40px
+            left: 0
+            border-bottom: 3px solid #99E2D0
+        article
+            display: flex
+            align-items: center
+            width: 100%
+            height: 70px
+            padding-left: 15px
+            margin: auto
+            border: 1px solid black
+            overflow: hidden
+            cursor: pointer
+            margin-top: 12px
+            background-color: white
+            border-radius: 15px
+            opacity: 0
+            margin-left: 100px
+
+            .description
+                flex-grow: 1
+                width: 10em
+                h3
+                    width: 100%
+                    font-size: 18px
+                    font-weight: 500
+
+                p
+                    width: 100%
+                    font-size: 15px
+                    font-weight: 300
+
+                h3,p
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    white-space: nowrap
+
+            span
+                flex-grow: 0
+                flex-shrink: 0
+                font-size: 15px
+                font-weight: 700
+                width: 25px
+                margin-right: 15px
+                margin-top: 15px
+            .checkmark
+                border-top-right-radius: 15px
+                border-bottom-right-radius: 15px
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: #99E2D0
+                width: 0
+                height: 100%
+                transition: 0.5s
+                i
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    color: #99E2D0
+                    background-color: white
+                    border-radius: 50%
+                    font-size: 16px
+                    width: 22px
+                    padding: 3px
+                    margin-left: 50px
+                    transition: 0.5s
+        article:hover
+            .checkmark
+                transition: 0.5s
+                width: 60px
+                i
+                    margin-left: 0px
+                    visibility: visible
+                    transition: 0.5s
+    .order-button
+        cursor: pointer
+        margin-top: 40px
+
+    .starter
+        article
+            animation: fade-in 2s forwards
+            animation-delay: 0s
+    .dish
+        article
+            animation: fade-in 2s forwards
+            animation-delay: 1s
+    .dessert
+        article
+            animation: fade-in 2s forwards
+            animation-delay: 2s
+
+@keyframes fade-in
+
+    100%
+        opacity: 1
+        margin-left: 0px

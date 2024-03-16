@@ -1,9 +1,17 @@
 @use '../base/variables' as *
 .header
+    position: relative
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    a
+        position: absolute
+        left: 25px
+        font-size: 22px
+        cursor: pointer
+        z-index: 3
+
     .header-logo
         z-index: 1
         height: 63px

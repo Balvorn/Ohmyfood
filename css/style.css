@@ -118,10 +118,18 @@ html {
 }
 
 .header {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.header a {
+  position: absolute;
+  left: 25px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 3;
 }
 .header .header-logo {
   z-index: 1;
@@ -313,14 +321,15 @@ html {
   font-size: 17px;
   font-weight: 300;
 }
-.restaurant-card .restaurant-card-content .icon {
+.restaurant-card .icon {
   border-radius: 0;
   position: absolute;
   margin-top: 10px;
   right: 25px;
   font-size: 22px;
 }
-.restaurant-card .restaurant-card-content .icon:hover {
+
+.icon:hover {
   color: transparent;
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
   background-clip: text;
@@ -373,30 +382,29 @@ html {
     inset: 0;
   }
 }
-section {
+.homepage section {
   padding: 35px 15px 50px;
 }
-section h2 {
+.homepage section h2 {
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 25px;
 }
-
-.order {
+.homepage .order {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #F6F6F6;
 }
-.order h1 {
+.homepage .order h1 {
   font-weight: 700;
   font-size: 24px;
   width: 275px;
   text-align: center;
   margin-bottom: 20px;
 }
-.order p {
+.homepage .order p {
   font-weight: 300;
   font-size: 18px;
   color: #353535;
@@ -404,11 +412,10 @@ section h2 {
   text-align: center;
   margin-bottom: 35px;
 }
-
-.howto {
+.homepage .howto {
   margin: auto;
 }
-.howto .howto-list {
+.homepage .howto .howto-list {
   max-width: 1080px;
   margin: auto;
   display: flex;
@@ -417,74 +424,227 @@ section h2 {
   align-items: center;
   padding: 0px 10px;
 }
-.howto .howto-list .howto-card {
+.homepage .howto .howto-list .howto-card {
   margin-bottom: 25px;
 }
-.howto .howto-list :last-child i {
+.homepage .howto .howto-list :last-child i {
   color: #9356DC;
 }
-
-.restaurants {
+.homepage .restaurants {
   background-color: #F6F6F6;
 }
-.restaurants h2 {
+.homepage .restaurants h2 {
   max-width: 1080px;
   margin-right: auto;
   margin-left: auto;
 }
-.restaurants .restaurants-list {
+.homepage .restaurants .restaurants-list {
   max-width: 1080px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.restaurants .restaurants-list a {
+.homepage .restaurants .restaurants-list a {
   width: 100%;
   max-width: 500px;
   margin-bottom: 25px;
 }
-
 @media (min-width: 768px) {
-  h1 {
+  .homepage h1 {
     font-size: 26px;
   }
-  section h2 {
+  .homepage section h2 {
     margin-bottom: 50px !important;
   }
-  .howto-card .howto-list .howto-card {
+  .homepage .howto-card .howto-list .howto-card {
     margin-bottom: 40px;
   }
-  .order h1 {
+  .homepage .order h1 {
     width: auto;
   }
-  .order p {
+  .homepage .order p {
     width: auto;
   }
 }
 @media (min-width: 1024px) {
-  h1 {
+  .homepage h1 {
     font-size: 40px;
   }
-  .howto h2 {
+  .homepage .howto h2 {
     max-width: 1080px;
     margin: auto;
   }
-  .howto .howto-list {
+  .homepage .howto .howto-list {
     flex-direction: row;
     justify-content: space-between;
   }
-  .howto .howto-list .howto-card {
+  .homepage .howto .howto-list .howto-card {
     width: 305px;
   }
-  .restaurants .restaurants-list {
+  .homepage .restaurants .restaurants-list {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .restaurants .restaurants-list a {
+  .homepage .restaurants .restaurants-list a {
     width: 45%;
     margin-bottom: 50px;
+  }
+}
+
+.restaurant-img {
+  max-height: 383px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  margin-top: -50px;
+  background-color: #F6F6F6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 40px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1055px;
+}
+.container h1 {
+  font-size: 28px;
+  font-family: "Shrikhand", serif;
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .icon {
+  font-size: 28px;
+}
+.container section {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 634px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container section h2 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 300;
+  position: relative;
+}
+.container section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  left: 0;
+  border-bottom: 3px solid #99E2D0;
+}
+.container section article {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding-left: 15px;
+  margin: auto;
+  border: 1px solid black;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 12px;
+  background-color: white;
+  border-radius: 15px;
+  opacity: 0;
+  margin-left: 100px;
+}
+.container section article .description {
+  flex-grow: 1;
+  width: 10em;
+}
+.container section article .description h3 {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+}
+.container section article .description p {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+}
+.container section article .description h3, .container section article .description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container section article span {
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 700;
+  width: 25px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.container section article .checkmark {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 0;
+  height: 100%;
+  transition: 0.5s;
+}
+.container section article .checkmark i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 16px;
+  width: 22px;
+  padding: 3px;
+  margin-left: 50px;
+  transition: 0.5s;
+}
+.container section article:hover .checkmark {
+  transition: 0.5s;
+  width: 60px;
+}
+.container section article:hover .checkmark i {
+  margin-left: 0px;
+  visibility: visible;
+  transition: 0.5s;
+}
+.container .order-button {
+  cursor: pointer;
+  margin-top: 40px;
+}
+.container .starter article {
+  animation: fade-in 2s forwards;
+  animation-delay: 0s;
+}
+.container .dish article {
+  animation: fade-in 2s forwards;
+  animation-delay: 1s;
+}
+.container .dessert article {
+  animation: fade-in 2s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    margin-left: 0px;
   }
 }
 
