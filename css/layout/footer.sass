@@ -1,12 +1,43 @@
 .footer
     background-color: #353535
     color: white
-    h2 
-        font-family: 'Shrikhand', serif
-        margin-bottom: 20px
+
     .footer-nav
         padding: 20px 15px
+        .footer-logo
+            font-family: 'Shrikhand', serif
+            div
+                margin-bottom: 20px
         p
             margin-bottom: 10px
             i
                 margin-right: 10px
+
+@media (min-width: 1025px)
+    .footer
+        
+        .footer-nav
+            height: 114px
+            display: flex
+            flex-direction: row
+            justify-content: end
+            align-items: flex-end
+            .footer-logo
+                order: 5
+
+            .linkgroup
+                display: flex
+                justify-content: end
+            .linkgroup1
+                a
+                    width: 200px
+            .linkgroup2
+                a
+                    width: 130px
+            p
+                margin-bottom: 0px
+            .footer-logo
+                font-size: 18px
+                div
+                    margin-bottom: 0px
+                    margin-right: 30px
