@@ -327,6 +327,52 @@ html {
   font-weight: 900;
 }
 
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  background-color: #f6f6f6;
+  animation: loader 3s linear forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: linear-gradient(to top, #9356DC, #FF79DA);
+  border: 2px solid;
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  animation: l6 2s forwards;
+}
+
+@keyframes loader {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes l6 {
+  100% {
+    inset: 0;
+  }
+}
 section {
   padding: 35px 15px 50px;
 }
@@ -399,53 +445,6 @@ section h2 {
   margin-bottom: 25px;
 }
 
-/* HTML: <div class="loader"></div> */
-.loader-container {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 2;
-  background-color: #f6f6f6;
-  animation: loader 3s linear forwards;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.loader {
-  width: 120px;
-  height: 22px;
-  border-radius: 20px;
-  color: linear-gradient(to top, #9356DC, #FF79DA);
-  border: 2px solid;
-  position: relative;
-}
-
-.loader::before {
-  content: "";
-  position: absolute;
-  margin: 2px;
-  inset: 0 100% 0 0;
-  border-radius: inherit;
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-  animation: l6 2s forwards;
-}
-
-@keyframes loader {
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes l6 {
-  100% {
-    inset: 0;
-  }
-}
 @media (min-width: 768px) {
   h1 {
     font-size: 26px;
