@@ -565,7 +565,7 @@ html {
 }
 .container section article .description {
   flex-grow: 1;
-  width: 10em;
+  width: 10px;
 }
 .container section article .description h3 {
   width: 100%;
@@ -595,7 +595,6 @@ html {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: #99E2D0;
   width: 0;
@@ -612,17 +611,11 @@ html {
   font-size: 16px;
   width: 22px;
   padding: 3px;
-  margin-left: 50px;
-  transition: 0.5s;
+  margin-left: 20px;
 }
 .container section article:hover .checkmark {
   transition: 0.5s;
   width: 60px;
-}
-.container section article:hover .checkmark i {
-  margin-left: 0px;
-  visibility: visible;
-  transition: 0.5s;
 }
 .container .order-button {
   cursor: pointer;
