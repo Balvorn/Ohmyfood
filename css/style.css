@@ -102,12 +102,6 @@ meter {
   -webkit-user-drag: element;
 }
 
-/* Revert Modal native behavior */
-:where(dialog:modal) {
-  all: revert;
-  box-sizing: border-box;
-}
-
 /* Remove details summary webkit styles */
 ::-webkit-details-marker {
   display: none;
@@ -141,7 +135,7 @@ html {
   align-items: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
-.header .header-logo h2 {
+.header .header-logo h1 {
   font-family: "Shrikhand", serif;
   font-size: 30px;
 }
@@ -162,7 +156,7 @@ html {
   margin-left: 15px;
 }
 
-@media (min-width: 1026px) {
+@media (min-width: 1024px) {
   .header .header-logo {
     box-shadow: none;
   }
@@ -180,7 +174,7 @@ html {
 .footer .footer-nav .footer-logo {
   font-family: "Shrikhand", serif;
 }
-.footer .footer-nav .footer-logo div {
+.footer .footer-nav .footer-logo h2 {
   margin-bottom: 20px;
 }
 .footer .footer-nav p {
@@ -190,7 +184,7 @@ html {
   margin-right: 10px;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .footer .footer-nav {
     height: 114px;
     display: flex;
@@ -217,7 +211,7 @@ html {
   .footer .footer-nav .footer-logo {
     font-size: 18px;
   }
-  .footer .footer-nav .footer-logo div {
+  .footer .footer-nav .footer-logo h2 {
     margin-bottom: 0px;
     margin-right: 30px;
   }
@@ -226,6 +220,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   width: 218px;
   height: 50px;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
@@ -328,8 +323,7 @@ html {
   right: 25px;
   font-size: 22px;
 }
-
-.icon:hover {
+.restaurant-card .icon:hover {
   color: transparent;
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
   background-clip: text;
@@ -353,7 +347,6 @@ html {
   width: 120px;
   height: 22px;
   border-radius: 20px;
-  color: linear-gradient(to top, #9356DC, #FF79DA);
   border: 2px solid;
   position: relative;
 }
@@ -397,9 +390,7 @@ html {
   align-items: center;
   background-color: #F6F6F6;
 }
-.homepage .order h1 {
-  font-weight: 700;
-  font-size: 24px;
+.homepage .order h2 {
   width: 275px;
   text-align: center;
   margin-bottom: 20px;
@@ -450,17 +441,17 @@ html {
   max-width: 500px;
   margin-bottom: 25px;
 }
+
 @media (min-width: 768px) {
-  .homepage h1 {
-    font-size: 26px;
-  }
   .homepage section h2 {
-    margin-bottom: 50px !important;
+    font-size: 24px;
+    margin-bottom: 50px;
   }
-  .homepage .howto-card .howto-list .howto-card {
+  .homepage section .howto-card .howto-list .howto-card {
     margin-bottom: 40px;
   }
-  .homepage .order h1 {
+  .homepage .order h2 {
+    font-size: 33px;
     width: auto;
   }
   .homepage .order p {
@@ -468,12 +459,13 @@ html {
   }
 }
 @media (min-width: 1024px) {
-  .homepage h1 {
+  .homepage .order h2 {
     font-size: 40px;
   }
   .homepage .howto h2 {
     max-width: 1080px;
     margin: auto;
+    margin-bottom: 50px;
   }
   .homepage .howto .howto-list {
     flex-direction: row;
@@ -492,7 +484,6 @@ html {
     margin-bottom: 50px;
   }
 }
-
 .restaurant-img {
   max-height: 383px;
   width: 100%;
@@ -564,8 +555,8 @@ html {
   margin-left: 100px;
 }
 .container section article .description {
-  flex-grow: 1;
   width: 10px;
+  flex-grow: 1;
 }
 .container section article .description h3 {
   width: 100%;
@@ -583,8 +574,6 @@ html {
   white-space: nowrap;
 }
 .container section article span {
-  flex-grow: 0;
-  flex-shrink: 0;
   font-size: 15px;
   font-weight: 700;
   width: 25px;
